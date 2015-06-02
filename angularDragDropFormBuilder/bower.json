@@ -1,0 +1,10 @@
+{
+  "name": "angulardemo",
+  "version": "0.0.0",
+  "description": "angular demo",
+  "main": "index.html",
+  "authors": [
+    "JBevans"
+  ],
+  "license": "MIT"
+}

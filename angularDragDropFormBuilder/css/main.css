@@ -1,0 +1,30 @@
+.drop{
+ position: absolute;
+    top:5px;
+    bottom: 5px;
+    border: 1px solid #000;
+    right:5px;
+    left:200px;
+    overflow: auto;
+}
+
+.drop ul{
+    list-style: none;
+}
+
+.drop ul li{
+    margin: 0.5em;
+}
+
+.draggable
+{
+    list-style: none;
+    width:150px;
+}
+
+.draggable li
+{
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 1px solid #000;
+}

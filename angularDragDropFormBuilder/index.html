@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+    <script src="app/module/demo.js"></script>
+    <script src="app/controller/democontroller.js"></script>
+    <title></title>
+</head>
+<body ng-controller="democontroller">
+<div>
+    <ul class="draggable">
+        <li ng-repeat="toolitem in components" data-drag="true" ng-model="toolitem" jqyoui-draggable data-jqyoui-options="{{options}}" data-controlid="{{toolitem.id}}"><a href="#">{{toolitem.name}}</a></li>
+    </ul>
+
+    <div class="drop" data-drop="true" jqyoui-droppable="{onDrop:'ComponentDropped(column)'}">
+        <span ng-show="dispcomponents.length===0">Drag Items Here To Build Form</span>
+        <ul>
+            <li ng-repeat="comps in dispcomponents">
+                <div><span ng-bind-html="comps.html"></span></div>
+            </li>
+        </ul>
+    <ul>
+
+    </ul>
+    </div>
+</div>
+</body>
+</html>
